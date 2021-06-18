@@ -25,29 +25,24 @@ BT2 - Từ link ảnh trên, hãy viết một slide xem ảnh bằng reactjs
 //import { useState } from 'react';
 import './style.css'; //đưa CSS vào component //external way
 
+import {config,constant} from './config'; //spread operator 
+import myName from './config';
+
+import Nav from './components/nav/Nav';
+import Content from './components/content/Content';
+import Footer from './components/footer/Footer';
+import { useState } from 'react';
+
 function App() {
-  const isRenderBlockA = false;
-  const foodList = [
-    'Tôm hùm',
-    'King Crab',
-    'Bò Waguy',
-    'Sữa chua trân trâu Hạ Long'
-  ];
+  const [isRender,setIsRender] =useState(true);
+  setTimeout(function(){
+     setIsRender(false);
+  },5000);
   return (
      <div>
-         {
-           isRenderBlockA && <div>block A</div>
-         }
-         {
-           isRenderBlockA ? <div>block A</div> : <div>block</div>
-         }
-
-         {
-           foodList.map(function(foodItem,index){
-              return (<div key={index}>{foodItem}</div>)
-           })
-         } 
-
+       {isRender && <Nav></Nav>}
+       <Content></Content>
+       <Footer></Footer>
      </div>
   );
 }
