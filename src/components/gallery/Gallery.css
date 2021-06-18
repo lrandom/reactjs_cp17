@@ -1,0 +1,34 @@
+.gallery{
+    display:grid;
+    width: 600px;
+    grid-template-columns: auto auto;
+    margin:0px auto;
+}
+
+.gallery img{
+    width:300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.modal{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:#ffffffab;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.modal img{
+    width:800px;
+}
+
+.modal button{
+    position: absolute;
+    top:0px;
+    right:0px;
+}

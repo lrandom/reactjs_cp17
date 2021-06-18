@@ -31,6 +31,7 @@ import myName from './config';
 import Nav from './components/nav/Nav';
 import Content from './components/content/Content';
 import Footer from './components/footer/Footer';
+import Gallery from './components/gallery/Gallery';
 import { useState } from 'react';
 
 function App() {
@@ -41,7 +42,7 @@ function App() {
   return (
      <div>
        {isRender && <Nav></Nav>}
-       <Content></Content>
+       <Gallery></Gallery>
        <Footer></Footer>
      </div>
   );
