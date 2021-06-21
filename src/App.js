@@ -21,6 +21,11 @@ tạo một giao diện dạng lưới và tải các ảnh lên lưới đó, k
 BT2 - Từ link ảnh trên, hãy viết một slide xem ảnh bằng reactjs
 */
 
+/*
+BT3 - kết hợp B1 và B2, tạo một gallery xem ảnh,
+khi click vào từng ảnh thì show ảnh bằng slide với ảnh hiện tại là ảnh click 
+*/
+
 //import logo from './logo.svg';
 //import { useState } from 'react';
 import './style.css'; //đưa CSS vào component //external way
@@ -32,6 +37,8 @@ import Nav from './components/nav/Nav';
 import Content from './components/content/Content';
 import Footer from './components/footer/Footer';
 import Gallery from './components/gallery/Gallery';
+import ParentComponent from './components/demoProps/ParentComponent';
+import Slide from './components/slide/Slide';
 import { useState } from 'react';
 
 function App() {
@@ -41,9 +48,7 @@ function App() {
   },5000);
   return (
      <div>
-       {isRender && <Nav></Nav>}
-       <Gallery></Gallery>
-       <Footer></Footer>
+        <ParentComponent></ParentComponent>
      </div>
   );
 }
