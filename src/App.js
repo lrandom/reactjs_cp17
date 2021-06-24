@@ -40,6 +40,7 @@ import Gallery from './components/gallery/Gallery';
 import ParentComponent from './components/demoProps/ParentComponent';
 import Slide from './components/slide/Slide';
 import { useState } from 'react';
+import TabUI from './components/tabs/TabUI';
 
 function App() {
   const [isRender,setIsRender] =useState(true);
@@ -48,7 +49,7 @@ function App() {
   },5000);
   return (
      <div>
-        <ParentComponent></ParentComponent>
+        <TabUI></TabUI>
      </div>
   );
 }
