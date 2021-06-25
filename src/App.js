@@ -29,28 +29,38 @@ khi click vào từng ảnh thì show ảnh bằng slide với ảnh hiện tạ
 //import logo from './logo.svg';
 //import { useState } from 'react';
 import './style.css'; //đưa CSS vào component //external way
+import Home from './views/Home';
+import About from './views/About';
+import Contact from './views/Contact';
+import { 
+   BrowserRouter as Router, 
+   Switch,
+   Route,
+   Link
+} from 'react-router-dom';
 
-import {config,constant} from './config'; //spread operator 
-import myName from './config';
-
-import Nav from './components/nav/Nav';
-import Content from './components/content/Content';
-import Footer from './components/footer/Footer';
-import Gallery from './components/gallery/Gallery';
-import ParentComponent from './components/demoProps/ParentComponent';
-import Slide from './components/slide/Slide';
-import { useState } from 'react';
-import TabUI from './components/tabs/TabUI';
 
 function App() {
-  const [isRender,setIsRender] =useState(true);
-  setTimeout(function(){
-     setIsRender(false);
-  },5000);
+
   return (
-     <div>
-        <TabUI></TabUI>
-     </div>
+    <Router>
+       <nav>
+          <Link to="/">Home</Link>
+          <Link to="/about/NIIT/086812921/086812921">About</Link>
+          <Link to="/contact">Contact</Link>
+       </nav>
+      <Switch>
+          <Route exact path="/">
+              <Home />
+          </Route>   
+          <Route path="/about/:company_name/:company_phone/:company_fax">
+               <About/>
+          </Route>  
+          <Route path="/contact">
+               <Contact/>
+          </Route>  
+      </Switch> 
+    </Router>
   );
 }
 
