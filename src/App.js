@@ -32,6 +32,7 @@ import './style.css'; //đưa CSS vào component //external way
 import Home from './views/Home';
 import About from './views/About';
 import Contact from './views/Contact';
+import Notfound from './views/Notfound';
 import { 
    BrowserRouter as Router, 
    Switch,
@@ -47,7 +48,7 @@ function App() {
        <nav>
           <Link to="/">Home</Link>
           <Link to="/about/NIIT/086812921/086812921">About</Link>
-          <Link to="/contact">Contact</Link>
+          <Link to="/contact?name=NIIT&age=20">Contact</Link>
        </nav>
       <Switch>
           <Route exact path="/">
@@ -59,6 +60,10 @@ function App() {
           <Route path="/contact">
                <Contact/>
           </Route>  
+
+          <Route path="*">
+             <Notfound></Notfound>
+          </Route>
       </Switch> 
     </Router>
   );
