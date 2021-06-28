@@ -5,7 +5,9 @@ class Home extends React.Component {
     }
 
     render(){
-        return <div style={{padding:'100px'}}>Đây là trang home</div>
+        return <div style={{padding:'100px'}}>
+            <img src="http://localhost:9000/uploads/1370793920957.jpg"/>
+        </div>
     }
 }
 

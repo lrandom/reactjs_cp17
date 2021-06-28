@@ -33,6 +33,7 @@ import Home from './views/Home';
 import About from './views/About';
 import Contact from './views/Contact';
 import Notfound from './views/Notfound';
+import QuizTest from './components/quiz_test/QuizTest';
 import { 
    BrowserRouter as Router, 
    Switch,
@@ -44,28 +45,7 @@ import {
 function App() {
 
   return (
-    <Router>
-       <nav>
-          <Link to="/">Home</Link>
-          <Link to="/about/NIIT/086812921/086812921">About</Link>
-          <Link to="/contact?name=NIIT&age=20">Contact</Link>
-       </nav>
-      <Switch>
-          <Route exact path="/">
-              <Home />
-          </Route>   
-          <Route path="/about/:company_name/:company_phone/:company_fax">
-               <About/>
-          </Route>  
-          <Route path="/contact">
-               <Contact/>
-          </Route>  
-
-          <Route path="*">
-             <Notfound></Notfound>
-          </Route>
-      </Switch> 
-    </Router>
+    <QuizTest></QuizTest>
   );
 }
 
