@@ -40,12 +40,17 @@ import {
    Route,
    Link
 } from 'react-router-dom';
-
+import anh from './assets/anh.svg';
 
 function App() {
 
   return (
-    <QuizTest></QuizTest>
+    <div>
+       <img src={anh}/>
+       <img src={process.env.PUBLIC_URL+"/logo192.png"}/>
+       <img src={require('./assets/anh.svg').default}/>
+    </div>
+
   );
 }
 
