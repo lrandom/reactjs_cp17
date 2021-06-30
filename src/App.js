@@ -34,6 +34,7 @@ import About from './views/About';
 import Contact from './views/Contact';
 import Notfound from './views/Notfound';
 import QuizTest from './components/quiz_test/QuizTest';
+
 import { 
    BrowserRouter as Router, 
    Switch,
@@ -41,16 +42,35 @@ import {
    Link
 } from 'react-router-dom';
 import anh from './assets/anh.svg';
+import MainPage from './views/MainPage';
+import Page1 from './views/Page1';
+import Page2 from './views/Page2';
+import Page3 from './views/Page3';
+
 
 function App() {
 
   return (
-    <div>
-       <img src={anh}/>
-       <img src={process.env.PUBLIC_URL+"/logo192.png"}/>
-       <img src={require('./assets/anh.svg').default}/>
-    </div>
+    <Router>
 
+      <Switch>
+        <Route path="/" exact>
+           <MainPage></MainPage>
+        </Route>
+
+         <Route path="/page-1">
+            <Page1></Page1>
+         </Route>
+
+         <Route path="/page-2">
+           <Page2></Page2>
+         </Route>
+
+         <Route path="/page-3">
+           <Page3></Page3>
+         </Route>
+      </Switch>
+    </Router>
   );
 }
 

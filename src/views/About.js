@@ -7,6 +7,35 @@ class About extends React.Component {
         this.companyName = this.params.company_name;
         this.companyPhone = this.params.company_phone;
         this.companyFax = this.params.company_fax;
+
+        this.state = {
+            data: [
+                {
+                    name:"Danh mục cha 1",
+                    isExpanded: false,
+                    children:[
+                          "Danh mục con 1",
+                          "Danh mục con 2"
+                    ]
+                },
+                {
+                    name:"Danh mục cha 2",
+                    isExpanded: false,
+                    children:[
+                          "Danh mục con 1",
+                          "Danh mục con 2"
+                    ]
+                },
+                {
+                    name:"Danh mục cha 3",
+                    isExpanded: false,
+                    children:[
+                          "Danh mục con 1",
+                          "Danh mục con 2"
+                    ]
+                }
+            ]
+        }
     }
 
     render(){
