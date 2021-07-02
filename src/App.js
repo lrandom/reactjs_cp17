@@ -43,9 +43,9 @@ import {
 } from 'react-router-dom';
 import anh from './assets/anh.svg';
 import MainPage from './views/MainPage';
-import Page1 from './views/Page1';
-import Page2 from './views/Page2';
-import Page3 from './views/Page3';
+import Page1 from './views/bt2_session_7/Page1';
+import Page2 from './views/bt2_session_7/Page2';
+//import Page3 from './views/Page3';
 
 
 function App() {
@@ -54,10 +54,7 @@ function App() {
     <Router>
 
       <Switch>
-        <Route path="/" exact>
-           <MainPage></MainPage>
-        </Route>
-
+    
          <Route path="/page-1">
             <Page1></Page1>
          </Route>
@@ -66,9 +63,7 @@ function App() {
            <Page2></Page2>
          </Route>
 
-         <Route path="/page-3">
-           <Page3></Page3>
-         </Route>
+      
       </Switch>
     </Router>
   );
