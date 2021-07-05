@@ -8,6 +8,24 @@ class Page1 extends React.Component {
            address:null,
            phone:null
         };
+        this.list = [
+            {
+                title:'Noi dung 1',
+                content:'Di cho'
+            },
+            {
+                title:'Noi dung 2',
+                content:'Di choi'
+            }
+        ];
+
+        localStorage.setItem('MY_LIST_NOTE',JSON.stringify(this.list));
+
+        
+    }
+    componentDidMount() {
+        const list = JSON.parse(localStorage.getItem('MY_LIST_NOTE'));
+        console.log(list);
     }
 
     next(){

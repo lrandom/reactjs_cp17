@@ -34,7 +34,6 @@ import About from './views/About';
 import Contact from './views/Contact';
 import Notfound from './views/Notfound';
 import QuizTest from './components/quiz_test/QuizTest';
-
 import { 
    BrowserRouter as Router, 
    Switch,
@@ -46,26 +45,13 @@ import MainPage from './views/MainPage';
 import Page1 from './views/bt2_session_7/Page1';
 import Page2 from './views/bt2_session_7/Page2';
 //import Page3 from './views/Page3';
-
+import DemoXHR from './views/DemoXHR';
+import DemoAxios from './views/DemoAxios';
 
 function App() {
 
   return (
-    <Router>
-
-      <Switch>
-    
-         <Route path="/page-1">
-            <Page1></Page1>
-         </Route>
-
-         <Route path="/page-2">
-           <Page2></Page2>
-         </Route>
-
-      
-      </Switch>
-    </Router>
+    <DemoAxios></DemoAxios>
   );
 }
 
