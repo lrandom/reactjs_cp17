@@ -48,10 +48,24 @@ import Page2 from './views/bt2_session_7/Page2';
 import DemoXHR from './views/DemoXHR';
 import DemoAxios from './views/DemoAxios';
 
+import List from './views/list_note/List';
+import Add from './views/list_note/Add';
+
 function App() {
 
   return (
-    <DemoAxios></DemoAxios>
+    <Router>
+        <Switch>
+           <Route path='/' exact>
+              <List></List>
+           </Route>
+
+           <Route path='/add' exact>
+               <Add></Add>
+           </Route>
+ 
+        </Switch>
+    </Router>
   );
 }
 
