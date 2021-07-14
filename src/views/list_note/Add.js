@@ -3,8 +3,8 @@ class Add extends React.Component {
     constructor(props) {
         super(props);
         this.state={
-            title:null,
-            content:null
+            title:'',
+            content:''
         }
     }
 
@@ -21,15 +21,15 @@ class Add extends React.Component {
         localStorage.setItem('LIST',JSON.stringify(list));
 
         this.setState({
-            title:null,
-            content:null
+            title:'',
+            content:''
         })
     }
 
     render(){
         return (
             <form onSubmit={this.add.bind(this)}>
-                <input value={this.state.title} onChange={(evt)=>{this.setState({title:evt.target.value})}}/>
+                <input value={this.state.title} type="text" onChange={(evt)=>{this.setState({title:evt.target.value})}}/>
 
                 <textarea value={this.state.content} onChange={(evt)=>{this.setState({content:evt.target.value})}}></textarea>
                 
